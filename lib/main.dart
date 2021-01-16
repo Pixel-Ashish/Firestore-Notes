@@ -26,10 +26,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           brightness: Brightness.light,
           primaryColor: Color(0xff1565C0),
-          primaryTextTheme: GoogleFonts.openSansTextTheme()
+          primaryTextTheme: GoogleFonts.poppinsTextTheme()
               .apply(displayColor: Colors.white, bodyColor: Colors.white),
           accentTextTheme: GoogleFonts.openSansTextTheme(),
-          textTheme: GoogleFonts.quicksandTextTheme(),
+          textTheme: GoogleFonts.poppinsTextTheme(),
         ),
         getPages: Routes.routes,
         initialRoute: "/",

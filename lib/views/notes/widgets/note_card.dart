@@ -17,11 +17,14 @@ class NoteCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("${note.title}",
-              style: Theme.of(context).textTheme.headline6.copyWith(
+          Text(
+            "${note.title}",
+            style: Theme.of(context).textTheme.headline6.copyWith(
                   fontWeight: FontWeight.bold,
                   color: Colors.blue[800],
-                  fontSize: 18)),
+                  fontSize: 18,
+                ),
+          ),
           Text("${note.details}", style: Theme.of(context).textTheme.bodyText1),
         ],
       ),

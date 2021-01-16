@@ -4,14 +4,15 @@ import 'package:firestore_note/shared/helpers.dart';
 import 'package:firestore_note/views/auth/auth_controller.dart';
 import 'package:get/get.dart';
 
+//Data base access object
 class DAO {
-  FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  FirebaseFirestore _firestore = FirebaseFirestore.instance; //
   final uid = AuthController.to.uid;
   Future<void> addNote(title, content) async {
     await _firestore.collection("users").doc(uid).collection("notes").add(
         {'createdAt': Timestamp.now(), 'title': title, "details": content});
-    Get.back();
-    helpers.showToast("Note added successfully.");
+    Get.back(); // Go back
+    helpers.showToast("Note added successfully."); //Show toast
   }
 
   Stream<List<NoteModel>> getNotes() {
