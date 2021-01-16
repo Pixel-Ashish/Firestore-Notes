@@ -11,9 +11,9 @@ class NoteController extends GetxController {
     autoFill();
   }
 
-  final NoteModel noteModel;
-
   NoteController(this.noteModel);
+
+  final NoteModel noteModel;
 
   static NoteController get to => Get.find();
   TextEditingController title = TextEditingController();
